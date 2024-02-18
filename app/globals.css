@@ -1,33 +1,89 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+html, body {
+  overflow-x: hidden;
+  background-color: #ffffff;
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+main {
+  padding: 1rem;
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+h1, h2 {
+  color: #000000;
+  font-size: 3.1rem;
+}
+
+h3 {
+  padding-bottom: 2rem;
+  color: #000000;
+  font-size: 1.8rem;
+}
+
+button {
+  border: none;
+  padding: 16px 8px;
+  width: 100%;
+  margin-top: 12px;
+  font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: #000000;
+  color: #ffffff;
+}
+button:hover{
+  background-color: salmon;
+  color: #fff;
+}
+.btn-disabled {
+  background-color: rgb(0, 0, 0);
+}
+
+li {
+  list-style-type: none;
+  cursor: pointer;
+  margin: 9px 0;
+  padding: 16px 8px;
+  color: #000105;
+  border: 1px solid lightgray;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.li-hover:hover {
+  background-color: salmon;
+  color: #fff;
+  columns: #fff;
+}
+
+.li-selected {
+  color: #fff;
+  background-color: salmon;
+}
+
+.container {
+  max-width: 740px;
+  width: 100%;
+  margin: auto;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top:5em;
+}
+
+.quiz-container {
+  background-color: #ffffff;
+  padding: 1rem;
+  margin-top: 2rem;
+  border-radius: 4px;
+}
+
+.container p {
+  padding: 8px 0;
 }
